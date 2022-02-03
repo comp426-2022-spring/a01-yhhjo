@@ -18,17 +18,18 @@ const port = (argv.port || 3000)
 // The function must read a file located at `./www/index.html` and do some stuff with it.
 // The stuff that should be inside this function is all below.
 
-fs.readFile('./www/index.html', 'utf8', (err, dat) => {
+fs.readFile('./www/index.htl', 'utf8', (err, dat) => {
     if(err){
-        return process.exit(1)
+        err.code=1
+        err.signal=null
+        console.error(err)
+        process.exit(1)
     }
     data = dat
 })
 
-
 // If there is an error, put it on the console error, return, and exit with error code 1. 
 // Do not be nice about exiting.
-
 
 // Define a const `server` as an arrow function using http.createServer. 
 // Use the documentation for the node.js http module. 
