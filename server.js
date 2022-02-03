@@ -20,12 +20,10 @@ const port = (argv.port || 3000)
 
 fs.readFile('./www/index.html', 'utf8', (err, dat) => {
     if(err){
-        err.code=1
-        err.signal=null
         console.error(err)
-        process.exit(1)
+        return
     }
-    data = dat
+    let data = dat
 })
 
 // If there is an error, put it on the console error, return, and exit with error code 1. 
