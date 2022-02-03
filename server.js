@@ -23,7 +23,7 @@ fs.readFile('./www/index.html', 'utf8', (err, dat) => {
         console.error(err)
         return
     }
-    let data = dat
+    data = dat
 })
 
 // If there is an error, put it on the console error, return, and exit with error code 1. 
