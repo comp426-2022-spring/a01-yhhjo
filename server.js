@@ -18,8 +18,9 @@ const port = (argv.port || 3000)
 // The function must read a file located at `./www/index.html` and do some stuff with it.
 // The stuff that should be inside this function is all below.
 
-fs.readFile('./www/index.html', 'utf8', (err, dat) => {
+fs.readFile('./www/inde.html', 'utf8', (err, dat) => {
     if(err){
+        err.errno = 1
         console.error(err)
         process.exit(1)
     }
