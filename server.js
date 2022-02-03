@@ -21,7 +21,7 @@ const port = (argv.port || 3000)
 fs.readFile('./www/index.html', 'utf8', (err, dat) => {
     if(err){
         console.error(err)
-        return
+        return process.exit(1)
     }
     data = dat
 })
