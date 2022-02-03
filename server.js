@@ -22,6 +22,7 @@ fs.readFile('./www/index.html', 'utf8', (err, dat) => {
     if(err){
         return process.exit(1)
     }
+    data = dat
 })
 
 
